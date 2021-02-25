@@ -1,0 +1,125 @@
+body{
+    box-sizing: border-box;
+    margin:0;
+}
+.wrapper{
+    display:grid;
+    gap:0.3rem;
+
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-areas: 
+    "header header header"
+    "title title title"
+    "banner banner offer1"
+    "banner banner offer2"
+    "sideMenu main main"
+    "recent main main"
+    "tags main main"
+    "footer footer footer"
+    
+    ;
+  
+}
+.wrapper > *{
+    padding: 1rem;
+    font-size: 24px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.header{
+    background-color: beige;
+    color: rgb(150, 33, 33);
+    grid-area: header;
+}
+.title{
+    background-color: aqua;
+    grid-area: title;
+
+}
+.main-banner{
+    background-color: aquamarine;
+    grid-area: banner;
+}
+.offer1{
+    background-color: pink;
+    grid-area: offer1;
+}
+.offer2{
+    background-color: plum;
+    grid-area: offer2;
+}
+.side-menu{
+    background-color: rebeccapurple;
+    grid-area: sideMenu
+}
+.tags{
+    background-color: greenyellow;
+    grid-area: tags;
+}
+.recent{
+    background-color: honeydew;
+    grid-area: recent;
+}
+.main{
+    background-color: hotpink;
+    grid-area: main;
+    display: flex;
+    flex-flow: row wrap;
+
+}
+.product{
+    background: indigo;
+    min-width: 200px;
+    min-height: 200px;
+    margin: 10px;
+    flex-grow: 1;
+    display:grid;
+    align-items: center;
+    justify-content: center;
+}
+.footer{
+    background-color: indianred;
+    grid-area: footer;
+}
+
+@media (max-width: 760px){
+.wrapper{
+    display:grid;
+    gap:0.3rem;
+
+    grid-template-columns: 1fr  1fr;
+    grid-template-areas: 
+    "header header "
+    "title title "
+    "banner banner "
+    "offer1 offer2"
+    "main main"
+    "sideMenu sideMenu"
+    "recent tags"
+    "footer footer";
+} 
+
+}
+@media(max-width:575px){
+    .wrapper{
+        display:grid;
+        gap:0.3rem;
+    
+        grid-template-columns: auto ;
+        grid-template-areas: 
+        "header "
+        "title "
+        "banner "
+        "offer1"
+        "offer2"
+        "main"
+        "sideMenu"
+        "recent"
+        "tags"
+        "footer";
+    } 
+
+}
